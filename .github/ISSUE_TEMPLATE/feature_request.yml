@@ -1,0 +1,31 @@
+name: ✨ Feature Request / 機能要望
+description: Suggest a feature for the future Ads toolkit / 将来の広告編ツールキットへの機能提案
+labels: ["enhancement", "coming-soon", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **重要 / Important**
+
+        このリポジトリは現在 [marketing-os-seo](https://github.com/start-x-work/marketing-os-seo) v0.1 に集中しているため、**実装着手は 2027 年 Q1 以降**となる。
+        機能要望は歓迎するが、即座の実装はできない。
+
+        This repository is on hold until **2027 Q1**. We are currently focused on shipping
+        [marketing-os-seo](https://github.com/start-x-work/marketing-os-seo) v0.1.
+        Feature requests are welcome but won't be implemented immediately.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / 解決したい課題
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution / 提案する解決策
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context / 補足情報
