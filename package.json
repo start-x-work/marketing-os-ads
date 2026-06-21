@@ -12,7 +12,7 @@
   },
   "type": "module",
   "scripts": {
-    "build": "pnpm -r build",
+    "build": "pnpm -r --filter '!@start-x-work/marketing-os-ads-web' build",
     "test": "vitest run",
     "lint": "biome check .",
     "format": "biome format --write .",

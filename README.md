@@ -21,6 +21,14 @@ npx @start-x-work/mos-ads campaign analyze '{"name":"Brand","budget":100000,"adG
 
 All commands support `--format json|table|markdown` and `--quiet` (suppress commercial footer).
 
+## Web UI (N7)
+
+```bash
+cd packages/web && pnpm build && pnpm deploy
+```
+
+Campaign structure diagnosis and creative evaluation in the browser (same core logic as CLI). Requires `GEMINI_API_KEY` in Cloudflare Pages secrets for creative evaluation.
+
 ## Docs
 
 - [API research](./docs/api-research.md)
