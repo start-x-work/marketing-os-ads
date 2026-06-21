@@ -1,0 +1,34 @@
+{
+  "name": "@start-x-work/mos-ads",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "license": "Apache-2.0",
+  "description": "Marketing-OS Ads command line toolkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/start-x-work/marketing-os-ads.git",
+    "directory": "packages/cli"
+  },
+  "bin": {
+    "mos-ads": "./dist/index.cjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "citty": "^0.2.2",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@start-x-work/marketing-os-ads-core": "workspace:*"
+  }
+}

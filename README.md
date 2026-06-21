@@ -1,25 +1,43 @@
 # Marketing-OS Ads
 
-AI-native ad operations toolkit.
+AI-native ad operations toolkit for diagnosis, structured decision logs, and creative evaluation.
 
-🚧 **このリポジトリは将来の実装のためのプレースホルダーです**
-🚧 **This repository is a placeholder for future implementation**
+v0.1 CLI focuses on **decision support only** — no auto submission, auto budget changes, or creative generation.
 
-**v0.1 リリース予定: 2027年 Q1 / v0.1 release: 2027 Q1**
+思想・境界線: **[manifesto / 広告編](https://github.com/start-x-work/manifesto/blob/main/ads/README.md)**  
+共通基盤: **[@start-x-work/mos-kit](https://github.com/start-x-work/mos-kit)**
 
-現在は [start-x-work/marketing-os-seo](https://github.com/start-x-work/marketing-os-seo) の v0.1 リリースに集中している。
+## Install
 
-We are currently focused on shipping marketing-os-seo v0.1 first.
+```bash
+npx @start-x-work/mos-ads campaign analyze '{"name":"Brand","budget":100000,"adGroups":[{"name":"Core","keywords":["marketing"],"ads":["Try Marketing-OS"]}]}' --format json
+```
 
-思想・ロードマップ上の位置づけ: **[manifesto / 広告編](https://github.com/start-x-work/manifesto/blob/main/ads/README.md)**
+## v0.1 CLI Features
 
-予定機能の詳細は [docs/PLANNED_FEATURES.md](./docs/PLANNED_FEATURES.md) を参照。
+- Campaign structure diagnosis: `mos-ads campaign analyze '<json>'`
+- Delivery decision log: `mos-ads campaign log '<json>'`
+- Creative evaluation: `mos-ads creative evaluate "<text>" [--model gemini|openai|anthropic]`
 
-参加方法:
+All commands support `--format json|table|markdown` and `--quiet` (suppress commercial footer).
 
-- ⭐ Star でリリース通知を受ける / Star to get release notifications
-- 💬 Discussions で議論に参加 / Join discussions
-- 📋 機能要望は Issue で / File feature requests via Issues
+## Docs
+
+- [API research](./docs/api-research.md)
+- [Architecture](./docs/architecture.md)
+
+## Development
+
+```bash
+pnpm install --frozen-lockfile
+pnpm lint && pnpm build && pnpm test && pnpm typecheck
+```
+
+Requires `@start-x-work/mos-kit` (local path: `../mos-kit` until npm publish).
+
+## License
+
+Apache-2.0
 
 ---
 
