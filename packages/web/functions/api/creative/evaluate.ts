@@ -3,11 +3,11 @@ import {
   evaluateCreative,
   isModelKind,
 } from "@start-x-work/marketing-os-ads-core";
+import { resolveApiKey, type AiKeyRequest } from "../../_ai-key";
 import { type Env, jsonError, readJson } from "../../_shared";
 
-interface EvaluateBody {
+interface EvaluateBody extends AiKeyRequest {
   text?: string;
-  model?: string;
 }
 
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
@@ -21,15 +21,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     if (!isModelKind(model)) {
       throw new Error("Invalid model");
     }
-    const apiKey =
-      model === "openai"
-        ? env.OPENAI_API_KEY
-        : model === "anthropic"
-          ? env.ANTHROPIC_API_KEY
-          : env.GEMINI_API_KEY;
-    if (!apiKey) {
-      throw new Error(`${model} API key is not configured`);
-    }
+    const apiKey = resolveApiKey(body, env, model);
     const result = await evaluateCreative(createProvider(model, apiKey), text);
     return Response.json(result);
   } catch (error) {

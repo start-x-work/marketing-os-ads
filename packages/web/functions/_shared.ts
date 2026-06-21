@@ -1,7 +1,7 @@
 import { CliError } from "@start-x-work/marketing-os-ads-core";
 
 export interface Env {
-  GEMINI_API_KEY: string;
+  GEMINI_API_KEY?: string;
   OPENAI_API_KEY?: string;
   ANTHROPIC_API_KEY?: string;
 }

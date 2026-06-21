@@ -40,8 +40,8 @@ importers:
   packages/core:
     dependencies:
       '@start-x-work/mos-kit':
-        specifier: file:../../../mos-kit
-        version: file:../mos-kit
+        specifier: ^0.1.0
+        version: 0.1.0
       zod:
         specifier: ^4.4.3
         version: 4.4.3
@@ -78,7 +78,7 @@ importers:
         version: 19.2.3(@types/react@19.2.17)
       '@vitejs/plugin-react':
         specifier: ^6.0.2
-        version: 6.0.2(vite@8.0.16(@types/node@25.9.4)(esbuild@0.27.7)(jiti@1.21.7))
+        version: 6.0.2(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@1.21.7))
       autoprefixer:
         specifier: ^10.5.0
         version: 10.5.0(postcss@8.5.15)
@@ -90,7 +90,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^8.0.16
-        version: 8.0.16(@types/node@25.9.4)(esbuild@0.27.7)(jiti@1.21.7)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@1.21.7)
       wrangler:
         specifier: ^4.98.0
         version: 4.103.0(@cloudflare/workers-types@4.20260621.1)
@@ -975,8 +975,8 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
-  '@start-x-work/mos-kit@file:../mos-kit':
-    resolution: {directory: ../mos-kit, type: directory}
+  '@start-x-work/mos-kit@0.1.0':
+    resolution: {integrity: sha512-nMJDsh16ntBIFy2zvinqYlkAdktIXR/8WBfmUx22k5Cq4y0BhX2K3dY1V7r2B4neNYnX/Oi/BdoieRa9x9Gt0g==}
 
   '@tanstack/query-core@5.101.0':
     resolution: {integrity: sha512-cQetA74EB+seWySv1TTKr828TnP0u39m6LykwDXIo84SNortpDkp30TMEjkqtYCNP9c40uT/iwl6MLiufEt0Ow==}
@@ -2550,7 +2550,7 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@start-x-work/mos-kit@file:../mos-kit':
+  '@start-x-work/mos-kit@0.1.0':
     dependencies:
       '@google/genai': 2.9.0
       cheerio: 1.2.0
@@ -2595,10 +2595,10 @@ snapshots:
 
   '@types/retry@0.12.0': {}
 
-  '@vitejs/plugin-react@6.0.2(vite@8.0.16(@types/node@25.9.4)(esbuild@0.27.7)(jiti@1.21.7))':
+  '@vitejs/plugin-react@6.0.2(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@1.21.7))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
-      vite: 8.0.16(@types/node@25.9.4)(esbuild@0.27.7)(jiti@1.21.7)
+      vite: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@1.21.7)
 
   '@vitest/expect@4.1.9':
     dependencies:
@@ -3534,6 +3534,19 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.9.4
       esbuild: 0.27.7
+      fsevents: 2.3.3
+      jiti: 1.21.7
+
+  vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@1.21.7):
+    dependencies:
+      lightningcss: 1.32.0
+      picomatch: 4.0.4
+      postcss: 8.5.15
+      rolldown: 1.0.3
+      tinyglobby: 0.2.17
+    optionalDependencies:
+      '@types/node': 25.9.4
+      esbuild: 0.28.1
       fsevents: 2.3.3
       jiti: 1.21.7
 

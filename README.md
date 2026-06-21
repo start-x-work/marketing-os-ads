@@ -27,7 +27,22 @@ All commands support `--format json|table|markdown` and `--quiet` (suppress comm
 cd packages/web && pnpm build && pnpm deploy
 ```
 
-Campaign structure diagnosis and creative evaluation in the browser (same core logic as CLI). Requires `GEMINI_API_KEY` in Cloudflare Pages secrets for creative evaluation.
+Live: https://marketing-os-ads.pages.dev
+
+Campaign structure diagnosis and creative evaluation in the browser. **AI keys are BYOK** — users enter Gemini/OpenAI/Anthropic keys in Settings (sessionStorage). No operator-side AI Secrets required on Cloudflare Pages.
+
+## Yahoo! Ads platform (read-only)
+
+```typescript
+import { createYahooAdsPlatform } from "@start-x-work/marketing-os-ads-core";
+
+const platform = createYahooAdsPlatform({
+  accessToken: process.env.YAHOO_ADS_ACCESS_TOKEN!,
+  accountId: Number(process.env.YAHOO_ADS_ACCOUNT_ID),
+});
+```
+
+Or `createYahooAdsPlatformFromEnv()` when `YAHOO_ADS_ACCESS_TOKEN` and `YAHOO_ADS_ACCOUNT_ID` are set.
 
 ## Docs
 

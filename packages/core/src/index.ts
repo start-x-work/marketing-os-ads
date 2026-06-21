@@ -33,4 +33,8 @@ export type {
   CampaignInput,
   CampaignMetrics,
 } from "./platforms/provider";
-export { createYahooAdsPlatform } from "./platforms/yahoo";
+export {
+  createYahooAdsPlatform,
+  createYahooAdsPlatformFromEnv,
+  type YahooAdsConfig,
+} from "./platforms/yahoo";

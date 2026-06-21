@@ -1,3 +1,5 @@
+import { aiKeysForModel, loadAiKeys } from "../lib/ai-settings";
+
 export interface CampaignStructureResult {
   campaign: string;
   adGroups: Array<{ name: string; keywords: string[]; ads: string[] }>;
@@ -29,10 +31,14 @@ export async function evaluateCreative(input: {
   text: string;
   model?: string;
 }): Promise<CreativeEvalResult> {
+  const model = (input.model ?? "gemini") as "gemini" | "openai" | "anthropic";
   return request("/api/creative/evaluate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(input),
+    body: JSON.stringify({
+      ...input,
+      ...aiKeysForModel(loadAiKeys(), model),
+    }),
   });
 }
 

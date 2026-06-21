@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
+import { AiKeySettings } from "./AiKeySettings";
 
 const navItems = [
   { to: "/campaign", label: "構造診断" },
@@ -51,6 +52,7 @@ export function Layout() {
             Marketing-OS
           </a>
         </p>
+        <AiKeySettings />
       </footer>
     </div>
   );
