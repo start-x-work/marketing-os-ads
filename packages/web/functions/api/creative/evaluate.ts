@@ -3,7 +3,7 @@ import {
   evaluateCreative,
   isModelKind,
 } from "@start-x-work/marketing-os-ads-core";
-import { resolveApiKey, type AiKeyRequest } from "../../_ai-key";
+import { type AiKeyRequest, resolveApiKey } from "../../_ai-key";
 import { type Env, jsonError, readJson } from "../../_shared";
 
 interface EvaluateBody extends AiKeyRequest {

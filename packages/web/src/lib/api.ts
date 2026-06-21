@@ -1,4 +1,5 @@
 import { aiKeysForModel, loadAiKeys } from "../lib/ai-settings";
+import type { YahooAdsCredentials } from "../lib/yahoo-settings";
 
 export interface CampaignStructureResult {
   campaign: string;
@@ -24,6 +25,29 @@ export async function analyzeCampaign(
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ campaign }),
+  });
+}
+
+export interface YahooCampaignListResult {
+  campaigns: Array<{
+    id: string;
+    name: string;
+    status: string;
+    budget: number;
+  }>;
+}
+
+export async function listYahooCampaigns(
+  credentials: YahooAdsCredentials,
+): Promise<YahooCampaignListResult> {
+  return request("/api/yahoo/campaigns", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      accessToken: credentials.accessToken,
+      accountId: credentials.accountId,
+      channel: credentials.channel,
+    }),
   });
 }
 

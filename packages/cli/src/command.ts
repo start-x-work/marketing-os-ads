@@ -3,6 +3,7 @@ import { defineCommand } from "citty";
 export const subCommands = {
   campaign: () => import("./commands/campaign").then((m) => m.default),
   creative: () => import("./commands/creative").then((m) => m.default),
+  platform: () => import("./commands/platform").then((m) => m.default),
 };
 
 export default defineCommand({

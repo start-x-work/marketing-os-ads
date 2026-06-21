@@ -1,7 +1,7 @@
 import type { AdPlatform, Campaign, CampaignMetrics } from "./provider";
 import {
-  fetchCampaigns,
   fetchCampaignStats,
+  fetchCampaigns,
   mapCampaign,
   type YahooAdsConfig,
 } from "./yahoo-client";
@@ -68,7 +68,6 @@ export function createYahooAdsPlatformFromEnv(): AdPlatform {
     accessToken,
     accountId,
     apiVersion: process.env.YAHOO_ADS_API_VERSION,
-    channel:
-      process.env.YAHOO_ADS_CHANNEL === "display" ? "display" : "search",
+    channel: process.env.YAHOO_ADS_CHANNEL === "display" ? "display" : "search",
   });
 }

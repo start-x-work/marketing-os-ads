@@ -1,9 +1,11 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { AiKeySettings } from "./AiKeySettings";
+import { YahooSettings } from "./YahooSettings";
 
 const navItems = [
   { to: "/campaign", label: "構造診断" },
   { to: "/creative", label: "クリエイティブ評価" },
+  { to: "/yahoo", label: "Yahoo 一覧" },
 ];
 
 export function Layout() {
@@ -53,6 +55,7 @@ export function Layout() {
           </a>
         </p>
         <AiKeySettings />
+        <YahooSettings />
       </footer>
     </div>
   );

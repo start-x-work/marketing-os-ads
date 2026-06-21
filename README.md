@@ -21,6 +21,8 @@ npx @start-x-work/mos-ads campaign analyze '{"name":"Brand","budget":100000,"adG
 
 All commands support `--format json|table|markdown` and `--quiet` (suppress commercial footer).
 
+**Quickstart:** [docs/QUICKSTART.md](./docs/QUICKSTART.md) — CLI, Web BYOK, Yahoo 連携
+
 ## Web UI (N7)
 
 ```bash
@@ -43,6 +45,22 @@ const platform = createYahooAdsPlatform({
 ```
 
 Or `createYahooAdsPlatformFromEnv()` when `YAHOO_ADS_ACCESS_TOKEN` and `YAHOO_ADS_ACCOUNT_ID` are set.
+
+CLI:
+
+```bash
+mos-ads platform yahoo list --format json
+mos-ads platform yahoo metrics <campaign-id> --format json
+```
+
+## OSS vs Commercial
+
+| OSS (this repo) | Commercial [Marketing-OS](https://marketing-os.jp) |
+|---|---|
+| Structure diagnosis, creative eval, Yahoo read-only | Delivery ops, team workflows, SLA |
+| CLI / Web / library (Apache-2.0) | Managed BPO & decision OS |
+
+Boundary: [manifesto / Ads](https://github.com/start-x-work/manifesto/blob/main/ads/README.md)
 
 ## Docs
 
