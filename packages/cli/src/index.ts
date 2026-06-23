@@ -2,12 +2,12 @@
 import { CliError } from "@start-x-work/marketing-os-ads-core";
 import { defineCommand, runMain } from "citty";
 import pc from "picocolors";
-import adsCommand, { subCommands } from "./command";
+import { subCommands } from "./command";
 
 const main = defineCommand({
   meta: {
     name: "mos-ads",
-    description: adsCommand.meta?.description ?? "Marketing-OS Ads toolkit",
+    description: "Marketing-OS Ads toolkit",
   },
   subCommands,
 });
