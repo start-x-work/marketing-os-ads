@@ -62,6 +62,14 @@ mos-ads platform yahoo metrics <campaign-id> --format json
 
 Boundary: [manifesto / Ads](https://github.com/start-x-work/manifesto/blob/main/ads/README.md)
 
+## 関連 OSS / Marketing-OS OSS line
+
+- [marketing-os-seo](https://github.com/start-x-work/marketing-os-seo) — SEO (LLMO/AEO) · `npx @start-x-work/mos-seo`
+- [marketing-os-social](https://github.com/start-x-work/marketing-os-social) — Social · `npx @start-x-work/mos-social`
+- [mos-video](https://github.com/start-x-work/mos-video) — SNS 動画の内製パイプライン（Python）
+- [mos-creative](https://github.com/start-x-work/mos-creative) — クリエイティブ制作支援
+- [mos-kit](https://github.com/start-x-work/mos-kit) — 共通基盤 · [manifesto](https://github.com/start-x-work/manifesto) — 思想・境界線
+
 ## Docs
 
 - [API research](./docs/api-research.md)
@@ -74,7 +82,7 @@ pnpm install --frozen-lockfile
 pnpm lint && pnpm build && pnpm test && pnpm typecheck
 ```
 
-Requires `@start-x-work/mos-kit` (local path: `../mos-kit` until npm publish).
+Requires `@start-x-work/mos-kit`（npm 公開済み。モノレポ開発時はワークスペースの `../mos-kit` を使用）。
 
 ## License
 
