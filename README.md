@@ -17,6 +17,7 @@ npx @start-x-work/mos-ads campaign analyze '{"name":"Brand","budget":100000,"adG
 
 - Campaign structure diagnosis: `mos-ads campaign analyze '<json>'`
 - Delivery decision log: `mos-ads campaign log '<json>'`
+  - Add `--export decision-record` to also print a [decision-record/v1](https://github.com/start-x-work/mos-kit/blob/main/docs/decision-record.md) draft. Only the decision, the rationale (as the first premise), and the date are copied; everything else is listed under `missing` for you to fill in.
 - Creative evaluation: `mos-ads creative evaluate "<text>" [--model gemini|openai|anthropic]`
 
 All commands support `--format json|table|markdown` and `--quiet` (suppress commercial footer).
