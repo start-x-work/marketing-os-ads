@@ -18,6 +18,11 @@ export {
   recordDecision,
 } from "./campaign/decision-log";
 export {
+  type DecisionRecordDraft,
+  type DecisionRecordDraftResult,
+  toDecisionRecordDraft,
+} from "./campaign/decision-record-draft";
+export {
   analyzeStructure,
   type CampaignStructure,
 } from "./campaign/structure";

@@ -40,8 +40,8 @@ importers:
   packages/core:
     dependencies:
       '@start-x-work/mos-kit':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: ^0.2.0
+        version: 0.2.0
       zod:
         specifier: ^4.4.3
         version: 4.4.3
@@ -975,8 +975,8 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
-  '@start-x-work/mos-kit@0.1.0':
-    resolution: {integrity: sha512-nMJDsh16ntBIFy2zvinqYlkAdktIXR/8WBfmUx22k5Cq4y0BhX2K3dY1V7r2B4neNYnX/Oi/BdoieRa9x9Gt0g==}
+  '@start-x-work/mos-kit@0.2.0':
+    resolution: {integrity: sha512-KZX7cfRbDJrg48KvdusYFf6BFrSGVk3Rvng54xqIClFG2kB5u9maM3PKC2ViwQ97rzb3xOSxZ0HJPE+SkuGesg==}
 
   '@tanstack/query-core@5.101.0':
     resolution: {integrity: sha512-cQetA74EB+seWySv1TTKr828TnP0u39m6LykwDXIo84SNortpDkp30TMEjkqtYCNP9c40uT/iwl6MLiufEt0Ow==}
@@ -1997,6 +1997,9 @@ packages:
   zod@4.4.3:
     resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
 
+  zod@4.6.7:
+    resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
+
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
@@ -2550,10 +2553,11 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@start-x-work/mos-kit@0.1.0':
+  '@start-x-work/mos-kit@0.2.0':
     dependencies:
       '@google/genai': 2.9.0
       cheerio: 1.2.0
+      zod: 4.6.7
     transitivePeerDependencies:
       - '@modelcontextprotocol/sdk'
       - bufferutil
@@ -3631,3 +3635,5 @@ snapshots:
       youch-core: 0.3.3
 
   zod@4.4.3: {}
+
+  zod@4.6.7: {}
